@@ -9,5 +9,9 @@ function AutoLogin(account) {
   this.cookies = {
     value = null,
   }
-  
+
+}
+
+function name(params) {
+
 }
