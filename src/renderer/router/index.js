@@ -37,27 +37,27 @@ export const constantRouterMap = [
     }]
   },
 
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
+  // {
+  //   path: '/example',
+  //   component: Layout,
+  //   redirect: '/example/table',
+  //   name: 'Example',
+  //   meta: { title: 'Example', icon: 'example' },
+  //   children: [
+  //     {
+  //       path: 'table',
+  //       name: 'Table',
+  //       component: () => import('@/views/table/index'),
+  //       meta: { title: 'Table', icon: 'table' }
+  //     },
+  //     {
+  //       path: 'tree',
+  //       name: 'Tree',
+  //       component: () => import('@/views/tree/index'),
+  //       meta: { title: 'Tree', icon: 'tree' }
+  //     }
+  //   ]
+  // },
 
   {
     path: '/form',
@@ -67,7 +67,20 @@ export const constantRouterMap = [
         path: 'index',
         name: '主动下注',
         component: () => import('@/views/form/index'),
-        meta: { title: '主动下注', icon: 'form' }
+        meta: { title: '主动下注', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
+    path: '/account',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: '主动下注',
+        component: () => import('@/views/form/index'),
+        meta: { title: '我的收益', icon: 'user' }
       }
     ]
   },
